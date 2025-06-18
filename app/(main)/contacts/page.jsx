@@ -3,7 +3,7 @@
 import { useConvexQuery } from "../../../hooks/use-convex-query";
 import { api } from "../../../convex/_generated/api";
 import { useQuery } from "convex/react";
-import React, { use, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { BarLoader } from "react-spinners";
 import { Button } from "../../../components/ui/button";
 import { Plus, User, Users } from "lucide-react";
@@ -11,12 +11,25 @@ import { Card, CardContent } from "../../../components/ui/card";
 import Link from "next/link";
 import { Avatar, AvatarImage, AvatarFallback } from "../../../components/ui/avatar";
 import CreateGroupModal from "./_components/create-group-modal";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const ContactsPage = () => {
   const [isCreateGroupModalOpen, setIsCreateGroupModalOpen] = useState(false);
   const { data, isLoading } = useConvexQuery(api.contacts.getAllContacts);
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  useEffect(()=>{
+    const createGroupParam = searchParams.get("createGroup");
+
+    if(createGroupParam === 'true'){
+      setIsCreateGroupModalOpen(true);
+      const url = new URL(window.location.href);
+      url.searchParams.delete("createGroup");
+
+      router.replace(url.pathname + url.search);
+    }
+  },[searchParams, router])
 
   if (isLoading) {
     return (

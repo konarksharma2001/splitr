@@ -54,7 +54,7 @@ const Header = () => {
             <Link href="/dashboard">
               <Button
                 variant="outline"
-                className="hidden md:inline-flex items-center gap-2 hover:text-green-600 hover:border-green-600 transition"
+                className="hidden md:inline-flex items-center gap-2 cursor-pointer hover:text-green-600 hover:border-green-600 transition"
               >
                 <LayoutDashboard className="h-4 w-4" />
                 Dashboard
