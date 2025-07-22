@@ -6,7 +6,7 @@
 
 
 
-### <a href="https://gosplittr.vercel.app" target="_blank" rel="noopener noreferrer">🔗 Live App: gosplittr.vercel.app</a>
+### 🔗 Live App : [gosplittr.vercel.app](https://gosplittr.vercel.app)
 
 
 ---
