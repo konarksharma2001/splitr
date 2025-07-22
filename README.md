@@ -5,7 +5,9 @@
 ![Splittr Landing Page](https://github.com/user-attachments/assets/71ac804c-3178-452a-b04f-3c2d5068e6eb)
 
 
-### 🔗 Live App: [https://gosplittr.vercel.app](https://gosplittr.vercel.app)
+
+### <a href="https://gosplittr.vercel.app" target="_blank" rel="noopener noreferrer">🔗 Live App: gosplittr.vercel.app</a>
+
 
 ---
 
